@@ -7,10 +7,13 @@ module.exports = {
     'app': './index.ts',
   },
   output: {
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    sourceMapFileName: '[name].map',
+    chunkFileName: '[id].chunk.js'
   },
   resolve: {
-    extensions: ['', '.ts', '.js', '.json', '.css', '.scss', '.html'],
+    extensions: ['', '.ts', '.js', '.css', '.html'],
+    modulesDirectories: ['node_modules']
   },
   module: {
     loaders: [
@@ -21,7 +24,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /(node_modules)/,
-        loader: 'ts'
+        loader: 'awesome-typescript-loader'
       }
     ]
   }

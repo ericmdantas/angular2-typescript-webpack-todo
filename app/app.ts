@@ -1,7 +1,5 @@
 import './app.css';
 
-console.log('wtf')
-
 import {
     Component
 } from '@angular/core';
